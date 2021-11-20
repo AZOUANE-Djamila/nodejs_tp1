@@ -55,7 +55,7 @@
                     <input class="form-control" name="jobTitle"  value="@model.donnees.jobTitle" />
                   </div>
                   <div class="card-footer">
-                    <input type="submit" value="Modifier" />  
+                    <input  class="btn btn-dark"  type="submit" value="Modifier" />  
                   </div>
                 </div>
               </form>

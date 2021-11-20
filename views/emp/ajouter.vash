@@ -54,7 +54,7 @@
                     <input class="form-control" name="jobTitle" />
                   </div>
                   <div class="card-footer">
-                    <input type="submit" value="AJOUTER" />  
+                    <input class="btn btn-dark"  type="submit" value="AJOUTER" />  
                   </div>
                 </div>
               </form>

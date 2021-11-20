@@ -20,55 +20,54 @@
       <div class="container-fluid">
         <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Ajouter un office</h3>
+                <h3 class="card-title">Modifier un office</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form" method="post" action="@model.donnees.officeCode">
-        <div class="card-body">
-          <div class="form-group">
-            <label >Office code</label>
-            <input class="form-control" name="officeCode" value="" /><br/>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label >Office code</label>
+                    <input class="form-control" name="officeCode" value="@model.donnees.officeCode" /><br/>
+                  </div>
+                  <div class="form-group">
+                    <label >City</label>
+                    <input class="form-control" name="city"  value="@model.donnees.city" />
+                  </div>
+                  <div class="form-group">
+                    <label >Phone</label>
+                    <input class="form-control" name="phone"  value="@model.donnees.phone" />
+                  </div>
+                  <div class="form-group">
+                    <label >Address Line 1 </label>
+                    <input class="form-control" name="addressLine1"  value="@model.donnees.addressLine1" />
+                  </div>
+                  <div class="form-group">
+                    <label >Address Line 2</label>
+                    <input class="form-control" name="addressLine2"  value="@model.donnees.addressLine2" />
+                  </div>
+                  <div class="form-group">
+                    <label>State</label>
+                    <input class="form-control" name="state"  value="@model.donnees.state" />
+                  </div>
+                  <div class="form-group">
+                    <label >Country</label>
+                    <input class="form-control" name="country"  value="@model.donnees.country" />
+                  </div>
+                  <div class="form-group">
+                    <label >Postal code</label>
+                    <input class="form-control" name="postalCode"  value="@model.donnees.postalCode" />
+                  </div>
+                  <div class="form-group">
+                    <label>Territory</label>
+                    <input class="form-control" name="territory"  value="@model.donnees.territory" />
+                  </div>
+                  <div class="card-footer">
+                    <input class="btn btn-dark" type="submit" value="Modifier" />  
+                  </div>
+                </div>
+              </form>
           </div>
-          <div class="form-group">
-            <label >City</label>
-            <input class="form-control" name="city" />
-          </div>
-          <div class="form-group">
-            <label >Phone</label>
-            <input class="form-control" name="phone" />
-          </div>
-          <div class="form-group">
-            <label >Address Line 1 </label>
-            <input class="form-control" name="addressLine1" />
-          </div>
-          <div class="form-group">
-            <label >Address Line 2</label>
-            <input class="form-control" name="addressLine2"  />
-          </div>
-          <div class="form-group">
-            <label>State</label>
-            <input class="form-control" name="state" />
-          </div>
-          <div class="form-group">
-            <label >Country</label>
-            <input class="form-control" name="country" />
-          </div>
-          <div class="form-group">
-            <label >Postal code</label>
-            <input class="form-control" name="postalCode" />
-          </div>
-          <div class="form-group">
-            <label>Territory</label>
-            <input class="form-control" name="territory" />
-          </div>
-          <div class="card-footer">
-            <input type="submit" value="Modifier" />  
-          </div>
-        </div>
-      </form>
-</form>
- </div>
       </div>
     </div>
 })
