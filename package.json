@@ -11,6 +11,8 @@
   "dependencies": {
     "admin-lte": "^3.1.0",
     "express": "^4.17.1",
+    "knex": "^0.95.14",
+    "mysql": "^2.18.1",
     "vash": "^0.13.0"
   },
   "devDependencies": {
