@@ -175,13 +175,13 @@
             </a-->
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="/employes.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Employés</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/offices.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Offices</p>
                 </a>

@@ -331,7 +331,7 @@ app.get("/offices.html", function(req, rep){
                 rep.status(500).end("Erreur de chargement des employés")
             }
             
-            rep.render("ofc/liste", {donnees:results})
+            rep.render("ofc/index", {donnees:results})
         }
       );
     //connection.destroy()

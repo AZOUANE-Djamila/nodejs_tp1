@@ -1,0 +1,53 @@
+@html.extend('template', function(model){
+	@html.block('contenu', function(model){
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Liste des offices</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+              <li class="breadcrumb-item active">Offices</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="content">
+        <div class="container-fluid">
+        @if(model.msg==1){
+            <div class="card card-info">              
+              <div class="card-header">
+                Office supprimé avec succès
+              </div>
+            </div>
+        }
+        @if(model.msg==2){
+            <div class="card card-danger">              
+              <div class="card-header">
+                Erreur de suppression
+              </div>
+            </div>
+        }
+            <input type="button" class="btn btn-block btn-success"
+              onclick="window.location.href='/emp/ajouter';" value="Nouveau" />
+            <table class="table table-bordered">
+                <tr><th>CODE</th><th>Phone</th><th>Adresse</th><th>ACTIONS</th></tr>                
+                @model.donnees.forEach(o=>{
+        		    <tr><td>@o.officeCode</td>
+                <td>@o.phone</td>
+                <td>@o.addressLine1 @o.addressLine1 - @o.city , @o.country</td>
+                <td>
+                  <a href='/ofc/modifier/@o.officeCode' class="btn"><i class="fas fa-edit"></i></a>
+                  <a href='/ofc/supprimer/@o.officeCode' class="btn"
+                        onclick="return confirm('Supprimer?')" ><i class="fas fa-trash"></i></a>
+                        </td>
+                </tr>
+                })                
+            </table>
+      </div>
+    </div>
+	})
+})
