@@ -1,0 +1,65 @@
+@html.extend('template', function(model){
+	@html.block('contenu', function(model){	
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Liste des employés</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Starter Page</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="content">
+      <div class="container-fluid">
+        <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Ajouter un employé</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form role="form" method="post" action="/emp/ajouter">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label >Employee Number</label>
+                    <input class="form-control" name="employeeNumber" />
+                  </div>
+                  <div class="form-group">
+                    <label >LastName</label>
+                    <input class="form-control" name="lastName" />
+                  </div>
+                  <div class="form-group">
+                    <label >firstName</label>
+                    <input class="form-control" name="firstName" />
+                  </div>
+                  <div class="form-group">
+                    <label >Extension</label>
+                    <input class="form-control" name="extension" />
+                  </div>
+                  <div class="form-group">
+                    <label >Email</label>
+                    <input class="form-control" name="email" type="email"  />
+                  </div>
+                  <div class="form-group">
+                    <label >OfficeCode</label>
+                    <input class="form-control" name="officeCode" />
+                  </div>
+                  <div class="form-group">
+                    <label >Job Title</label>
+                    <input class="form-control" name="jobTitle" />
+                  </div>
+                  <div class="card-footer">
+                    <input type="submit" value="AJOUTER" />  
+                  </div>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  })
+})

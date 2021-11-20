@@ -1,0 +1,66 @@
+@html.extend('template', function(model){
+	@html.block('contenu', function(model){
+		
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Liste des employés</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Starter Page</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="content">
+      <div class="container-fluid">
+        <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Modifier un employé</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form role="form" method="post" action="@model.donnees.employeeNumber">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label >Employee Number</label>
+                    <input class="form-control" name="employeeNumber" value="@model.donnees.employeeNumber" /><br/>
+                  </div>
+                  <div class="form-group">
+                    <label >Nom</label>
+                    <input class="form-control" name="lastName" value="@model.donnees.lastName" />
+                  </div>
+                  <div class="form-group">
+                    <label >Prénom</label>
+                    <input class="form-control" name="firstName"  value="@model.donnees.firstName" />
+                  </div>
+                  <div class="form-group">
+                    <label >Extension</label>
+                    <input class="form-control" name="extension"  value="@model.donnees.extension"  />
+                  </div>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input class="form-control" name="email" type="email"  value="@model.donnees.email"  />
+                  </div>
+                  <div class="form-group">
+                    <label >OfficeCode</label>
+                    <input class="form-control" name="officeCode"  value="@model.donnees.officeCode" />
+                  </div>
+                  <div class="form-group">
+                    <label >Job Title</label>
+                    <input class="form-control" name="jobTitle"  value="@model.donnees.jobTitle" />
+                  </div>
+                  <div class="card-footer">
+                    <input type="submit" value="Modifier" />  
+                  </div>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+})
+})
